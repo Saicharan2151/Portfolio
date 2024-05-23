@@ -1,14 +1,57 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     text-decoration: none;
     background: transparent;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
-body{
-    background: rgb(30,30,30);
-    color:white;
+
+body {
+    background: #f7f7f7;
+    color: #333333;
     overflow: hidden;
     overflow-y: scroll;
+}
+
+/* Define primary and secondary colors for consistent use */
+:root {
+    --primary-color: #4CAF50; /* Green */
+    --secondary-color: #ffffff; /* White */
+    --accent-color: #333333; /* Dark Grey */
+    --bg-color: #f7f7f7; /* Light Grey */
+    --text-color: #333333; /* Dark Grey */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+}
+
+a {
+    color: var(--primary-color);
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--accent-color);
+}
+
+section {
+    padding: 4rem 2rem;
+    margin: 0 auto;
+    max-width: 80rem;
 }

@@ -1,54 +1,86 @@
-#contactPage{
+#contactPage {
     min-height: calc(100vh - 4rem);
     width: 100vw;
-    max-width: 60rem;
+    /* max-width: 75rem; */
     margin: 0 auto;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    background-color:rgb(30,30,30); /* Adjusted to match overall background */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color:white
 }
-.contactPageTitle{
+
+.contactPageTitle {
     font-size: 3rem;
     margin-bottom: 1rem;
+    color: #007BFF;
 }
-.clientDesc{
+
+.clientDesc {
     font-weight: 300;
     font-size: 1rem;
-
+    margin-bottom: 1rem;
+    color: white
 }
-.clientImgs{
+
+.clientImgs {
     margin: 1rem 0;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
-.clientImg{
+
+.clientItem {
+    margin: 1rem;
+    text-align: center;
+}
+
+.clientImg {
     object-fit: cover;
-    width: 23%;
-    min-width: 9rem;
+    width: 350px;
+    height: 350px;
     margin: auto;
     padding: 0.25rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-#clients{
+
+.clientText {
+    font-size: 1rem;
+    font-weight: 300;
+    color: white;
+    margin-top: 0.5rem;
+}
+
+#clients {
     padding: 2rem;
 }
-.contactDesc{
+
+.contactDesc {
     padding: 1rem;
     font-size: medium;
     font-weight: 300;
+    color: white;
 }
-.contactForm{
-    margin:1rem;
+
+.contactForm {
+    margin: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width:90vw;
+    width: 90vw;
     max-width: 60rem;
+    
 }
-.name,.email,.msg{
+
+.name, .email, .msg {
     font-size: medium;
     width: 100%;
     max-width: 40rem;
@@ -57,23 +89,29 @@
     color: white;
     border: none;
     border-radius: 0.5rem;
-    background: rgb(40,40,40);
+    background: rgb(40, 40, 40);
 }
-.submitBtn{
+
+.submitBtn {
     background: white;
-    border: none;
+    border: 1px solid black;
     border-radius: 0.5rem;
     margin: 2rem;
     padding: 0.75rem 3.5rem;
+    cursor: pointer;
+    color:black
 }
-.links{
+
+.links {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
-.link{
+
+.link {
     object-fit: cover;
     height: 3rem;
     width: 3rem;
     margin: 0 0.75rem;
-
+    cursor: pointer;
 }

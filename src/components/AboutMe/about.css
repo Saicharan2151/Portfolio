@@ -1,0 +1,139 @@
+/* src/components/About/about.css */
+#about {
+    width: 100vw;
+    /* max-width: 75rem; */
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    font-family: sans-serif;
+    background: rgb(30,30,30); /* Adjust this color to match your total background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.aboutTitle {
+    text-align: center;
+    color: #007BFF;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.aboutTitle::after {
+    content: '';
+    width: 100px;
+    height: 3px;
+    background: #007BFF;
+    display: block;
+    margin: 0.5rem auto;
+}
+
+.aboutContent {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.aboutImage {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.aboutText {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: calc(100% - 250px - 2rem); /* Adjust width based on image size and margin */
+}
+
+.aboutInfo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.experienceBox, .connectBox {
+    background: rgb(2, 36, 46);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 48%;
+    color:white;
+}
+
+.experienceBox img, .connectBox img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+}
+
+.aboutParagraph {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+    width: 100%;
+}
+
+.aboutText h3 {
+    margin: 1rem 0;
+    color: #007BFF;
+}
+
+.aboutText p, .aboutParagraph p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.linkedinLink {
+    color: #007BFF;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.contactBtn {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 2rem;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .aboutContent {
+        flex-direction: column;
+    }
+
+    .aboutImage {
+        margin: 0 auto 2rem auto;
+        width: 200px;
+        height: 200px;
+    }
+
+    .aboutText {
+        width: 100%;
+    }
+
+    .experienceBox, .connectBox {
+        max-width: 100%;
+        margin: 1rem 0;
+    }
+}

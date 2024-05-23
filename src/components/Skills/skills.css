@@ -1,69 +1,115 @@
-#skills{
+#skills {
     overflow: hidden;
     width: 100vw;
-    max-width: 65rem;
+    /* max-width: 75rem; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     margin: 0 auto;
+    background-color: rgb(30,30,30);
+    color: white;
 }
-.skillTitle{
+
+.skillTitle {
     font-size: 3rem;
     font-weight: 600;
     padding-top: 3rem;
     margin-bottom: 1.5rem;
+    color: #007BFF;
 }
-.skillDesc{
+
+.skillDesc {
     font-weight: 400;
     font-size: 1rem;
     max-width: 51rem;
     padding: 0 2rem;
 }
-.skillBars{
+
+.skillBars {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     margin: 1.5rem;
-    width:100vw;
+    width: 100%;
     max-width: 80%;
     text-align: left;
-
 }
-.skillBar{
+
+.skillBar {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 1rem;
     padding: 1.5rem 2rem;
     border-radius: 0.5rem;
-    background: rgb(50,50,50);
+    background: rgb(50, 50, 50);
+    flex: 1 1 45%; /* Adjusted to ensure two components are side by side */
+    max-width: 45%;
 }
-.skillBarImg{
+
+.skillBarImg {
     object-fit: cover;
     height: 3rem;
-    width:3rem;
-    margin-right: 2rem;
+    width: 3rem;
+    margin-bottom: 1rem;
 }
-.skillBarText{
+.skillBarTextLists{
+    color:aqua;
+}
+.skillBarText {
     font-size: 0.75rem;
     font-weight: 200;
+    text-align: left;
+    width: 100%;
+    color: #007BFF;
 }
-@media screen and (max-width:720px) {
-    .skillBarText{
-        font-size: 2vw;
 
-    }
-    
+.skillBarText h2 {
+    text-align: center;
+    margin-bottom: 1rem;
 }
-@media screen and (max-width:480px) {
-    .skillBarText>p{
-        font-size: 3vw;
-        
+
+.skillBarText ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skillBarText li {
+    padding-left: 1.5rem;
+    text-indent: -1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.skillBarText li::before {
+    content: "✓";
+    color: #007BFF;/* Adjust color if needed */
+    padding-right: 0.5rem;
+}
+
+@media screen and (max-width: 720px) {
+    .skillBar {
+        flex: 1 1 100%;
+        max-width: 100%;
     }
-    .skillBarImg{
+
+    .skillBarText {
+        font-size: 2vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .skillBarText > p {
+        font-size: 3vw;
+    }
+
+    .skillBarImg {
         height: 2.25rem;
         width: 2.25rem;
     }
-    .skillBarText{
-        
+
+    .skillBarText {
         font-size: 5vw;
     }
-    
 }

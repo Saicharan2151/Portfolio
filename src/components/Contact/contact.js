@@ -1,9 +1,7 @@
 import React, { useRef } from 'react';
 import "./contact.css";
-import Walmart from "../../assets/walmart.png";
-import Adobe from "../../assets/adobe.png";
-import Microsoft from "../../assets/microsoft.png";
-import Facebook from "../../assets/facebook.png";
+import Walmart from "../../assets/tcs2-165742482116x9-1.jpg";
+import Adobe from "../../assets/AUM-Entrance-2.jpg";
 import FacebookIcon from "../../assets/facebook-icon.png";
 import TwitterIcon from "../../assets/twitter.png";
 import YouTubeIcon from "../../assets/youtube.png";
@@ -19,7 +17,7 @@ const Contact = () => {
             .then((result) => {
               console.log('SUCCESS!');
               e.target.reset();
-              alert('Email sent')
+              alert('Email sent');
             },
             (error) => {
               console.log('FAILED...', error.text);
@@ -32,13 +30,17 @@ const Contact = () => {
             <h1 className='contactPageTitle'>My Clients</h1>
             <p className='clientDesc'>
                 I have had the opportunity to work with a diverse group of companies.
-                Some of the notable companies I have worked with includes
+                Some of the notable companies I have worked with include:
             </p>
             <div className='clientImgs'>
-                <img src={Walmart} alt='Walmart' className='clientImg'/>
-                <img src={Adobe} alt='Adobe' className='clientImg'/>
-                <img src={Microsoft} alt='Microsoft' className='clientImg'/>
-                <img src={Facebook} alt='Facebook' className='clientImg'/>
+                <div className='clientItem'>
+                    <img src={Walmart} alt='Walmart' className='clientImg'/>
+                    <p className='clientText'>Tata Consultancy Services ltd<br/>Hyderabad,India<br/>Full Stack Developer<br/>Dec 2020-June 2022</p>
+                </div>
+                <div className='clientItem'>
+                    <img src={Adobe} alt='Adobe' className='clientImg'/>
+                    <p className='clientText'>Auburn University at Montgomery<br/>Montgomery,AL<br/>Graduate Teaching Assistant<br/>Jan 2023-Dec2023</p>
+                </div>
             </div>
         </div>
         <div id='contact'>
@@ -50,15 +52,23 @@ const Contact = () => {
                 <textarea className="msg" name='message' rows='5' placeholder='Your message'></textarea>
                 <button className='submitBtn' type='submit'>Submit</button>
                 <div className='links'>
-                    <img src={FacebookIcon} alt='FacebookIcon' className='link'/>    
-                    <img src={TwitterIcon} alt='TwitterIcon' className='link'/>    
-                    <img src={YouTubeIcon} alt='YouTubeIcon' className='link'/>    
-                    <img src={InstagramIcon} alt='InstagramIcon' className='link'/>    
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                        <img src={FacebookIcon} alt='FacebookIcon' className='link'/>    
+                    </a>
+                    <a href="https://x.com/home" target="_blank" rel="noopener noreferrer">
+                        <img src={TwitterIcon} alt='TwitterIcon' className='link'/>    
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                        <img src={YouTubeIcon} alt='YouTubeIcon' className='link'/>    
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                        <img src={InstagramIcon} alt='InstagramIcon' className='link'/>    
+                    </a>
                 </div>
             </form>
         </div>
     </section>
-  )
+  );
 }
 
 export default Contact;

@@ -1,40 +1,45 @@
-import React from 'react'
-import "./skills.css"
+import React from 'react';
+import "./skills.css";
 import FrontEnd from "../../assets/ui-design.png";
 import BackEnd from "../../assets/website-design.png";
-import DevOps from "../../assets/app-design.png"
 
 const Skills = () => {
   return (
     <section id='skills'>
-    <span className='skillTitle'>What I Do</span>
-    <span className='skillDesc'>Full-Stack Developer with Expertise in Front-End and Back-End Technologies | Specializing in React, Node.js, and Cloud-Based Solutions</span>
-    <div className='skillBars'>
-      <div className='skillBar'>
-        <img src={FrontEnd} alt='FrontEnd' className='skillBarImg'/>
-        <div className='skillBarText'>
-          <h2>Front-End Development</h2>
-          <p>Creating responsive and dynamic user interfaces using React, Angular, HTML, CSS, and JavaScript.</p>
+      <span className='skillTitle'>Fields I worked</span>
+      <span className='skillDesc'>Full-Stack Developer with Expertise in Front-End and Back-End Technologies | Specializing in React, Node.js, and Cloud-Based Solutions</span>
+      <div className='skillBars'>
+        <div className='skillBar'>
+          <img src={FrontEnd} alt='FrontEnd' className='skillBarImg'/>
+          <div className='skillBarText'>
+            <h2>Front-End Development</h2>
+            <ul className='skillBarTextLists'>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>Bootstrap</li>
+              <li>Angular</li>
+              <li>React</li>
+            </ul>
+          </div>
+        </div>
+        <div className='skillBar'>
+          <img src={BackEnd} alt='BackEnd' className='skillBarImg'/>
+          <div className='skillBarText'>
+            <h2>Back-End Development</h2>
+            <ul className='skillBarTextLists'>
+              <li>Java</li>
+              <li>Python</li>
+              <li>Node.js</li>
+              <li>MongoDB</li>
+              <li>MySQL</li>
+              <li>C#</li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div className='skillBar'>
-        <img src={BackEnd} alt='BackEnd' className='skillBarImg'/>
-        <div className='skillBarText'>
-          <h2>Back-End Development</h2>
-          <p>Developing robust and scalable back-end systems using Node.js, Express, and various databases like MongoDB and SQL.</p>
-        </div>
-      </div>
-      <div className='skillBar'>
-        <img src={DevOps} alt='DevOps' className='skillBarImg'/>
-        <div className='skillBarText'>
-          <h2>DevOps & Cloud</h2>
-          <p>Implementing CI/CD pipelines and managing cloud infrastructure with AWS, Azure, and Docker.</p>
-        </div>
-      </div>
-    </div>   
-  </section>
-  
+    </section>
   )
 }
 
-export default Skills
+export default Skills;
