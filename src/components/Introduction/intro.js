@@ -1,6 +1,6 @@
 import React from 'react';
 import "./intro.css";
-import bg from "../../assets/charan.jpeg";
+import bg from "../../assets/Charan2.jpeg";
 import btnImg from "../../assets/hireme.png";
 
 const Intro = () => {
